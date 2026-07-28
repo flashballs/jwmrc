@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<JWM>
+<RootMenu onroot="12">
+<Menu icon="folder.png" label="Development">
+    <Program label="CMake curses GUI (ccmake)">st -e ccmake</Program>
+    <Program label="IDLE (Python IDE)">idle</Program>
+    <Program label="Python">st -e python</Program>
+</Menu>
+<Menu icon="folder.png" label="Editors">
+    <Program label="Nano">st -e nano</Program>
+    <Program label="Vi">st -e vi</Program>
+    <Program label="Vim">st -e vim</Program>
+    <Program label="Xemacs">xemacs</Program>
+    <Program label="Xfw">xfw</Program>
+</Menu>
+<Menu icon="folder.png" label="Games">
+    <Menu icon="folder.png" label="Adventure">
+        <Program label="Dwarf Fortress">dwarf-fortress</Program>
+    </Menu>
+    <Program label="Bloons TD 6">steam steam://rungameid/960090</Program>
+    <Program label="Counter-Strike">steam steam://rungameid/10</Program>
+    <Program label="Counter-Strike: Source">steam steam://rungameid/240</Program>
+    <Program label="Crypt of the NecroDancer">steam steam://rungameid/247080</Program>
+    <Program label="DOOM + DOOM II">steam steam://rungameid/2280</Program>
+    <Program label="Fallout: New Vegas">steam steam://rungameid/22380</Program>
+    <Program label="Garry's Mod">steam steam://rungameid/4000</Program>
+    <Program label="Geometry Dash">steam steam://rungameid/322170</Program>
+    <Program label="Goat Simulator">steam steam://rungameid/265930</Program>
+    <Program label="Half-Life">steam steam://rungameid/70</Program>
+    <Program label="Half-Life 2">steam steam://rungameid/220</Program>
+    <Program label="Hotline Miami">steam steam://rungameid/219150</Program>
+    <Program label="Hotline Miami 2: Wrong Number">steam steam://rungameid/274170</Program>
+    <Program label="Immortal Redneck">steam steam://rungameid/595140</Program>
+    <Program label="Neverwinter Nights: Enhanced Edition">steam steam://rungameid/704450</Program>
+    <Program label="Plague Inc: Evolved">steam steam://rungameid/246620</Program>
+    <Program label="STAR WARS™ Knights of the Old Republic™ II: The Sith Lords™">steam steam://rungameid/208580</Program>
+    <Program label="Super Meat Boy">steam steam://rungameid/40800</Program>
+    <Program label="Terraria">steam steam://rungameid/105600</Program>
+    <Program label="The Binding of Isaac: Rebirth">steam steam://rungameid/250900</Program>
+    <Program label="The Elder Scrolls V: Skyrim Special Edition">steam steam://rungameid/489830</Program>
+    <Program label="ULTRAKILL">steam steam://rungameid/1229490</Program>
+    <Program label="Vital Shell Demo">steam steam://rungameid/3928280</Program>
+</Menu>
+<Menu icon="folder.png" label="Graphics">
+    <Program label="Xfi">xfi</Program>
+</Menu>
+<Menu icon="folder.png" label="Multimedia">
+    <Program label="ncspot">st -e ncspot</Program>
+    <Program label="Volume Control">pavucontrol</Program>
+</Menu>
+<Menu icon="folder.png" label="Network">
+    <Program label="Mozilla Firefox (bin)">firefox-bin</Program>
+    <Program label="Steam">steam</Program>
+    <Program label="W3m">st -e w3m</Program>
+</Menu>
+<Menu icon="folder.png" label="Other">
+    <Program label="windowmaker">wmaker</Program>
+</Menu>
+<Menu icon="folder.png" label="Science">
+    <Program label="bc">st -e bc</Program>
+    <Program label="dc">st -e dc</Program>
+</Menu>
+<Menu icon="folder.png" label="Shells">
+    <Program label="GIT">st -e git</Program>
+    <Program label="kitty">kitty</Program>
+    <Program label="MC">st -e mc</Program>
+    <Program label="rxvt-unicode">urxvt</Program>
+    <Program label="ST">st</Program>
+    <Program label="Xfe">xfe</Program>
+</Menu>
+<Menu icon="folder.png" label="System">
+    <Menu icon="folder.png" label="Settings">
+        <Program label="Openbox Configuration Manager">obconf</Program>
+        <Program label="Setup Hot Keys">lxhotkey --gui=gtk</Program>
+        <Program label="Tint2 Settings">tint2conf</Program>
+        <Program label="WPrefs">WPrefs</Program>
+    </Menu>
+    <Program label="chronyc">st -e chronyc</Program>
+    <Program label="Htop">st -e htop</Program>
+    <Program label="pstree">st -e pstree</Program>
+    <Program label="pstree">st -e pstree.x11</Program>
+    <Program label="Tint2">tint2</Program>
+    <Program label="Top">st -e top</Program>
+    <Program label="wmbattery">wmbattery</Program>
+    <Program label="Xfp">xfp</Program>
+</Menu>
+<Menu icon="folder.png" label="Utilities">
+    <Program label="Info">st -e info</Program>
+    <Program label="XFontSel">xfontsel</Program>
+    <Program label="Xsetroot">xsetroot</Program>
+</Menu>
+<Separator/>
+<Restart label="Restart" icon="restart.png"/>
+<Exit label="Exit" confirm="true" icon="quit.png"/>
+</RootMenu>
+
+    <!-- Options for program groups. -->
+    <Group>
+        <Option>tiled</Option>
+        <Option>aerosnap</Option>
+    </Group>
+    <Group>
+        <Class>Pidgin</Class>
+        <Option>sticky</Option>
+    </Group>
+    <Group>
+        <Name>xterm</Name>
+        <Option>vmax</Option>
+r   </Group>
+    <Group>
+        <Name>xclock</Name>
+        <Option>drag</Option>
+        <Option>notitle</Option>
+    </Group>
+
+    <!-- Tray at the bottom. -->
+    <Tray x="0" y="-1" autohide="off" valign="top" height="35">
+
+        <TrayButton icon="jwm-blue">root:1</TrayButton>
+        <Spacer width="2"/>
+        <TrayButton label="_">showdesktop</TrayButton>
+        <Spacer width="2"/>
+
+        <Pager labeled="true"/>
+
+        <TaskList maxwidth="256"/>
+
+        <Dock/>
+        <Clock format="%I:%M"><Button mask="123">exec:xclock</Button></Clock>
+    </Tray>
+
+    <!-- Visual Styles -->
+    <WindowStyle decorations="motif">
+	<Font>Hack Nerd Font-14:mono</Font>
+        <Width>7</Width>
+        <Height>25</Height>
+        <Corner>0</Corner>
+        <Foreground>#3B4252</Foreground>
+        <Background>#3B4252</Background>
+        <Outline>#4c566a</Outline>
+        <Opacity>1.0</Opacity>
+        <Active>
+            <Foreground>#D8DEE9</Foreground>
+            <Background>#3B4252</Background>
+            <Outline>#4c566a</Outline>
+            <Opacity>1.0</Opacity>
+        </Active>
+    </WindowStyle>
+    <TrayStyle group="true" list="all" decorations="motif">
+        <Font>Hack Nerd Font-14:mono</Font>
+        <Background>#2E3440</Background>
+        <Foreground>#D8DEE9</Foreground>
+        <Outline>#4c566a</Outline>
+        <Opacity>1.0</Opacity>
+    </TrayStyle>
+    <TaskListStyle decorations="motif">
+      <Font>Hack Nerd Font-14:mono</Font>
+      <Active>
+        <Foreground>#D8DEE9</Foreground>
+        <Background>#2E3440</Background>
+      </Active>
+      <Foreground>#D8DEE9</Foreground>
+      <Background>#4c566a</Background>
+    </TaskListStyle>
+    <PagerStyle decorations="motif">
+        <Outline>#4c566a</Outline>
+        <Foreground>#D8DEE9</Foreground>
+        <Background>#2E3440</Background>
+        <Text>#D8DEE9</Text>
+        <Active>
+            <Foreground>#D8DEE9</Foreground>
+            <Background>#4c566a</Background>
+        </Active>
+    </PagerStyle>
+    <MenuStyle decorations="motif">
+        <Font>Hack Nerd Font-14:mono</Font>
+        <Foreground>#D8DEE9</Foreground>
+        <Background>#2E3440</Background>
+        <Outline>#4c566a</Outline>
+        <Active>
+            <Foreground>#D8DEE9</Foreground>
+            <Background>#4c566a</Background>
+        </Active>
+        <Opacity>1.0</Opacity>
+    </MenuStyle>
+    <PopupStyle>
+        <Font>Hack Nerd Font-13:mono</Font>
+        <Foreground>#000000</Foreground>
+        <Background>#999999</Background>
+    </PopupStyle>
+
+    <!-- Path where icons can be found.
+         IconPath can be listed multiple times to allow searching
+         for icons in multiple paths.
+      -->
+    <IconPath>
+        /usr/share/icons/wm-icons/32x32-aquafusion
+    </IconPath>
+    <IconPath>
+        /usr/local/share/jwm
+    </IconPath>
+    <IconPath>
+        /usr/share/jwm
+    </IconPath>
+
+    <!-- Virtual Desktops -->
+    <!-- Desktop tags can be contained within Desktops for desktop names. -->
+    <Desktops width="4" height="1">
+        <!-- Default background. Note that a Background tag can be
+              contained within a Desktop tag to give a specific background
+              for that desktop.
+         -->
+        <Background type="solid">#2e3440</Background>
+    </Desktops>
+
+    <!-- Double click speed (in milliseconds) -->
+    <DoubleClickSpeed>400</DoubleClickSpeed>
+
+    <!-- Double click delta (in pixels) -->
+    <DoubleClickDelta>2</DoubleClickDelta>
+
+    <!-- The focus model (sloppy or click) -->
+    <FocusModel>sloppy</FocusModel>
+
+    <!-- The snap mode (none, screen, or border) -->
+    <SnapMode distance="10">border</SnapMode>
+
+    <!-- The move mode (outline or opaque) -->
+    <MoveMode>opaque</MoveMode>
+
+    <!-- The resize mode (outline or opaque) -->
+    <ResizeMode>opaque</ResizeMode>
+
+    <!-- Key bindings -->
+    <Key key="Up">up</Key>
+    <Key key="Down">down</Key>
+    <Key key="Right">right</Key>
+    <Key key="Left">left</Key>
+    <Key key="h">left</Key>
+    <Key key="j">down</Key>
+    <Key key="k">up</Key>
+    <Key key="l">right</Key>
+    <Key key="Return">select</Key>
+    <Key key="Escape">escape</Key>
+
+    <Key mask="A" key="Tab">nextstacked</Key>
+    <Key mask="4" key="q">close</Key>
+    <Key mask="A" key="#">desktop#</Key>
+    <Key mask="4" key="r">root:1</Key>
+    <Key mask="A" key="F2">window</Key>
+    <Key mask="4" key="m">maximize</Key>
+    <Key mask="4" key="u">fullscreen</Key>
+    <Key mask="A" key="Right">rdesktop</Key>
+    <Key mask="A" key="Left">ldesktop</Key>
+    <Key mask="A" key="Up">udesktop</Key>
+    <Key mask="A" key="Down">ddesktop</Key>
+
+    <Key mask="4" key="t">exec:st</Key>
+    <Key mask="4" key="f">exec:firefox-bin</Key>
+    <Key mask="4" key="e">exec:st -e mc</Key>
+    <Key mask="4S" key="e">exec:xfe</Key>
+    <Key mask="4S" key="f">exec:firefox-bin --private-window</Key>
+    <Key mask="4S" key="s">exec:steam</Key>
+       <Key key="XF86MonBrightnessUp">exec:brightnessctl set +5%</Key>
+   <Key key="XF86MonBrightnessDown">exec:brightnessctl set 5%-</Key>
+   <Key key="XF86AudioRaiseVolume">exec:pactl set-sink-volume @DEFAULT_SINK@ +5%</Key>
+<Key key="XF86AudioLowerVolume">exec:pactl set-sink-volume @DEFAULT_SINK@ -5%</Key>
+<Key key="XF86AudioMute">exec:pactl set-sink-mute @DEFAULT_SINK@ toggle</Key>
+
+
+</JWM>
