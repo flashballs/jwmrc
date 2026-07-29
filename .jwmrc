@@ -211,7 +211,7 @@ r   </Group>
               contained within a Desktop tag to give a specific background
               for that desktop.
          -->
-        <Background type="solid">#2e3440</Background>
+        <Background type="command">xsetroot -mod 16 16 -bg '#2e3440' -fg '#4c566a'</Background>
     </Desktops>
 
     <!-- Double click speed (in milliseconds) -->
